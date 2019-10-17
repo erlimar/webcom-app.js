@@ -11,5 +11,6 @@ $ npm run build
 ## Development
 ```sh
 $ npm install
+$ npm run build
 $ npm start
 ```
