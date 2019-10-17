@@ -1,0 +1,31 @@
+{
+  "name": "webcom-app.js",
+  "version": "0.1.0",
+  "description": "Web Component Application Architecture",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erlimar/webcom-app.js.git"
+  },
+  "keywords": [
+    "e5r",
+    "web",
+    "component",
+    "web-component",
+    "DOM"
+  ],
+  "author": "Erlimar Silva Campos <erlimar@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/erlimar/webcom-app.js/issues"
+  },
+  "homepage": "https://github.com/erlimar/webcom-app.js#readme",
+  "devDependencies": {
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.2"
+  }
+}
