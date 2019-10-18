@@ -3,40 +3,32 @@
 
 const WebComponent = require('./web-component')
 const registerComponent = require('./register-component')
-const router = require('./router')
 
 /*
-  // -----------------
-  // Idéia
-  // -----------------
+  import WebApp from 'webcom-app'
+  import AboutPage from './pages/about-page'
+  import MePage from './pages/me-page'
+  import SignInGuardian from './guardians/signin-guardian'
+  import ModernBrowserGuardian from './guardians/modern-browser-guardian'
   
-  registerApp({
-    selector: '#app-root',
-    resolverResolver: routerResolverFn,
-    routes: [
-      { path: '/about', component: 'AboutPage' },
-      { path: '/me', component: 'MePage', guardians: ['SigninGuardian', 'ModernBrowserGuardian'] },
-    ]
-  })
-  
-  registerGuardian('SigninGuardian', signinGuardianFn)
-  registerGuardian('ModernBrowserGuardian', modernBrowserGuardianFn)
-  
-  //
-  // Startup application engine
-  //
-  function initFn() {}
-  
-  //
-  //
-  //
-  function routerResolverFn() {}
-  
-  // DOMContentLoaded only call initFn
-  document.addEventListener("DOMContentLoaded", initFn)
+  WebApp()
+    .selector('#app-root')
+    .resolver(routerResolverFn)
+    .route({ path: '/about', component: AboutPage })
+    .route({
+      path: '/me',
+      component: MePage,
+      guardians: [ SignInGuardian, ModernBrowserGuardian]
+    })
+    .attach()
+
+  WebApp.attach() {
+    // ...
+    document.addEventListener("DOMContentLoaded", WebApp.startup)
+  }
 */
 
 window.WebComponent = WebComponent
 window.registerComponent = registerComponent
 
-document.addEventListener("DOMContentLoaded", router)
+document.addEventListener("DOMContentLoaded", WebApp.startup)
