@@ -3,8 +3,7 @@
   "version": "0.1.0",
   "description": "Web Component Application Architecture",
   "scripts": {
-    "start": "serve",
-    "build": "webpack"
+    "start": "nodemon -x 'webpack; serve' -i ./dist"
   },
   "repository": {
     "type": "git",
@@ -24,6 +23,7 @@
   },
   "homepage": "https://github.com/erlimar/webcom-app.js#readme",
   "devDependencies": {
+    "nodemon": "^1.19.4",
     "serve": "^11.2.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9"
